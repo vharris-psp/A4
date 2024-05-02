@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "Zh9Z9EibDSUUebHGk1ODJLbx6r80ybhQFFDxlQVE6tU=",
+  "Source": "A4",
+  "BasePath": "_content/A4",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "A4/wwwroot",
+      "Source": "A4",
+      "ContentRoot": "/Users/vharris/Projects/A4/wwwroot/",
+      "BasePath": "_content/A4",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/vharris/Projects/A4/wwwroot/css/styles.css",
+      "SourceId": "A4",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vharris/Projects/A4/wwwroot/",
+      "BasePath": "_content/A4",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/styles.css"
+    }
+  ]
+}

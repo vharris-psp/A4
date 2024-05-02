@@ -1,0 +1,35 @@
+@model IEnumerable<A4.Models.User> 
+@{
+    ViewData["Title"] = "User";
+    Layout = "_Layout";
+}
+
+<h1>User List</h1>
+
+
+<table class="custom-table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Account Number</th>
+            <th>Actions:</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.FirstName</td>
+                <td>@user.LastName</td>
+                <td>@user.Id</td>
+                <td>@user.AccountNumber</td>
+                <td>
+                    <a asp-controller="User" asp-action="Edit" asp-route-id="@user.Id" class="btn btn-primary">Edit</a>
+                    <a asp-controller="User" asp-action="Delete" asp-route-id="@user.Id" class="btn btn-primary">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

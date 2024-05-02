@@ -1,0 +1,24 @@
+@model A4.Models.User
+@{
+    ViewData["Title"] = "Confirm Delete";
+    Layout = "_Layout";
+}
+
+<h2>Confirm Delete</h2>
+
+<p>Are you sure you want to delete this user?</p>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+    </dl>
+    <form asp-action="DeleteConfirmed" asp-route-id="@Model.Id" method="post">
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-default">Cancel</a>
+    </form>
+</div>

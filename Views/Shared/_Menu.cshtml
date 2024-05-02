@@ -1,0 +1,26 @@
+<nav class="menu">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li class="dropdown">
+            <button class="dropbtn">Users</button>
+            <div class="dropdown-content">
+                <a asp-controller="User" asp-action="Index">All Users</a>
+                <a asp-controller="User" asp-action="Create">New User</a>                
+            </div>
+        </li>
+        <li class="dropdown">
+            <button class="dropbtn">Products</button>
+            <div class="dropdown-content">
+                <a asp-controller="Product" asp-action="Index">All Products</a>
+                <a asp-controller="Product" asp-action="Create">New Product</a>                
+            </div>
+        </li>
+        <li class="dropdown">
+            <button class="dropbtn">Orders</button>
+            <div class="dropdown-content">
+                <a asp-controller="PO" asp-action="Index">All Orders</a>
+                <a asp-controller="PO" asp-action="Create">Place Order</a>                
+            </div>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "_Layout";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h1>Welcome to the Dashboard</h1>
+
+<div>
+    <a asp-controller="Product" asp-action="Create" class="btn btn-primary">Add Product</a>
+</div>
+
+<div>
+    <a asp-controller="PO" asp-action="Create" class="btn btn-primary">Add Product</a>
+</div>
+
+<div>
+    <a asp-controller="User" asp-action="Create" class="btn btn-primary">Create User</a>
+    <a asp-controller="User" asp-action="Index" class="btn btn-primary">List Users</a>
+</div>
+

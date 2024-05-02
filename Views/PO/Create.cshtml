@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "PO";
+    Layout = "_Layout";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model A4.Models.PO
+@using A4.Models
+
+<div class="container">
+    <h2>Add Purchase Order</h2>
+    <form asp-action="AddPO" method="post" id="addPOForm" novalidate>
+        <div class="form-group">
+            <label asp-for="UserId">User ID</label>
+            <select asp-for="UserId" class="form-control">
+                @foreach(var user in ViewData["Users"] as List<User>)
+                {
+                    <option value="@user.Id">@user.Name - @user.Id</option>
+                }
+            </select>
+            <span asp-validation-for="UserId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ProductId">Product ID</label>
+            <select asp-for="ProductId" class="form-control" id="productSelect">
+                @foreach(var product in ViewData["Products"] as List<Product>)
+                {
+                    <option value="@product.Id" data-description="@product.Description">@product.Name - @product.Id</option>
+                }
+            </select>
+            <span asp-validation-for="ProductId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Quantity">Quantity</label>
+            <input asp-for="Quantity" class="form-control" />
+            <span asp-validation-for="Quantity" class="text-danger"></span>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Add Purchase Order</button>
+    </form>
+</div>
