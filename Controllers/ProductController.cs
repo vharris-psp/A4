@@ -52,6 +52,39 @@ public class ProductController : Controller{
     {
         return "UPC:" + System.Guid.NewGuid().ToString().Substring(0, 8).ToUpper();
     }
-    
+    [HttpGet]
+    public IActionResult IncreaseQuantity()
+    {
+        var products = _context.Products.ToList();
+
+        if (products == null || products.Count == 0)
+        {
+            ViewData["Message"] = "No products found.";
+        }
+
+        ViewData["Products"] = products;
+        return View();
+    }
+
+
+    [HttpPost]
+    public IActionResult IncreaseQuantity(string productId, int quantityToAdd)
+    {
+        var product = _context.Products.Find(productId);
+
+        if (product == null)
+        {
+            return NotFound();
+        }
+
+        // Update available quantity
+        product.AvailableQuantity += quantityToAdd;
+
+        // Save changes to the database
+        _context.SaveChanges();
+
+        // Redirect to product details or any other appropriate page
+        return RedirectToAction("Index", "Product");
+    }
 }
 }

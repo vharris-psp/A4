@@ -104,6 +104,11 @@ public class UserController : Controller{
         return View(user);
     }
     
+   public async Task<IActionResult> UserManagementPartial()
+    {
+        var users = await _context.Users.ToListAsync();
+        return PartialView("_UserManagementPartial", users);
+    }
     
     public IActionResult Delete(string id)
     {

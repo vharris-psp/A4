@@ -85,3 +85,32 @@
 .custom-table th {
     background-color: #f2f2f2; /* Light gray background for header */
 }
+#user-quick-add {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+#user-quick-add form {
+    display: flex;
+    gap: 10px;
+}
+
+#user-quick-add input[type="text"] {
+    width: 100px; /* Adjust width as needed */
+}
+
+#user-quick-add button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}

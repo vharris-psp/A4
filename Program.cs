@@ -64,6 +64,10 @@ namespace A4
                             pattern: "PO/{action=Create}/{id?}",
                             defaults: new { controller = "PO" }
                         );
+                        endpoints.MapControllerRoute(
+                            name: "userManagement",
+                            pattern: "User/UserManagementPartial",
+                            defaults: new { controller = "User", action = "UserManagementPartial" });
                         
                     });
                 });

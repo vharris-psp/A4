@@ -123,3 +123,4 @@
 /Users/vharris/Projects/A4/obj/Debug/net8.0/A4.pdb
 /Users/vharris/Projects/A4/obj/Debug/net8.0/A4.genruntimeconfig.cache
 /Users/vharris/Projects/A4/obj/Debug/net8.0/ref/A4.dll
+/Users/vharris/Projects/A4/obj/Debug/net8.0/A4.sourcelink.json

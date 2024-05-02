@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Increase Quantity";
+}
+
+<h2>Increase Quantity</h2>
+
+@if (ViewData["Message"] != null)
+{
+    <p>@ViewData["Message"]</p>
+}
+else
+{
+    <form asp-action="IncreaseQuantity" method="post">
+        <div class="form-group">
+            <label for="productId">Select Product:</label>
+            <select id="productId" name="productId" class="form-control">
+                <option value="">Select Product</option>
+                @foreach (var product in (List<A4.Models.Product>)ViewData["Products"])
+                {
+                    <option value="@product.Id">@product.Name</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="quantityToAdd">Quantity to Add:</label>
+            <input type="number" id="quantityToAdd" name="quantityToAdd" class="form-control" min="1" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Add Quantity</button>
+    </form>
+}

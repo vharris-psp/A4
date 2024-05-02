@@ -3,6 +3,7 @@
     Layout = "_Layout";
 }
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using A4.Models;
 
 <h1>Welcome to the Dashboard</h1>
 
@@ -11,11 +12,13 @@
 </div>
 
 <div>
-    <a asp-controller="PO" asp-action="Create" class="btn btn-primary">Add Product</a>
+    <a asp-controller="PO" asp-action="Create" class="btn btn-primary">New Order</a>
 </div>
 
 <div>
-    <a asp-controller="User" asp-action="Create" class="btn btn-primary">Create User</a>
-    <a asp-controller="User" asp-action="Index" class="btn btn-primary">List Users</a>
+    <div>
+        @await Html.PartialAsync("~/Views/User/_UserManagementPartial.cshtml", ViewData["Users"])
+    </div>
+
 </div>
 
